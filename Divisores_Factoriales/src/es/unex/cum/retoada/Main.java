@@ -19,11 +19,12 @@ public class Main {
 		StringTokenizer tokens_numeros = new StringTokenizer(entrada);
 		String num1 = tokens_numeros.nextToken(); //cojo el primer numero
 		String num2 = tokens_numeros.nextToken(); //cojo el segundo numero
-		while ((entrada.charAt(0) != '0' || entrada.charAt(2) != '0') && 
-				(Integer.parseInt(num1) < n) &&
+		int i = 0;
+		while (i<4 && (Integer.parseInt(num1) < n) &&
 				(Integer.parseInt(num2) < n)) { //dejo de leer cuando introduce 0 0
 			entrada = s.nextLine();	
-			if (entrada.charAt(0) != '0' || entrada.charAt(2) != '0') lista.add(entrada);
+			lista.add(entrada);
+			i++;
 		}
 		
 		m.separar(lista);
